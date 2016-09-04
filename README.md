@@ -73,7 +73,7 @@ let bookmarkStore = BookmarkStore(delegate:UserDefaultsBookmarkStorageDelegate()
 2. Wrap the URL(s) you wish to access into an object conforming to `URLAccess`. A reference `SimpleURLAccess` struct is provided:
 
 ```
-let URLAccess = SimpleURLAccess()
+let URLAccess = SimpleURLAccess(NSURL.fileURL(withPath: "/foo/bar") as URL)
 ```
 
 3. Access the URL:
